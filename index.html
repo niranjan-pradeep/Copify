@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleindex.css">
+    <title>Copify - We all need something to Cope with..... </title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="jams.html">JAMS</a></li>
+                <li><a href="signup.html">SIGN UP</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="left_col">
+                <h1>DROWN<br>THE<br>SORROW</h1>
+            </div>
+            <div class="right_col">
+                <div class="now_playing">
+                    <h2>Now Playing</h2><br>
+                    <p id="songTitle">Dance of The Spirit</p>
+                    <img src="images/play.png" id="icon" alt="Pause/Play">
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="myMelody" src="images/Dance of The Spirit.mp3"></audio>
+    <script>
+        var myMelody = document.getElementById("myMelody");
+        var icon = document.getElementById("icon");
+    
+        icon.onclick = function(){
+            if(myMelody.paused){
+                myMelody.play();
+                icon.src = "images/pause.png";
+            }else{
+                myMelody.pause();
+                icon.src = "images/play.png";
+            }
+        }
+    </script>
+</body>
+</html>

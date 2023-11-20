@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylejams.css">
+    <title>Copify - Home</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="jams.html">JAMS</a></li>
+                <li><a href="signup.html">SIGN UP</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="playlists">
+                <img src="images/boxes.png" alt="box">
+                <h2>Moods</h2>
+                <div class="playlist">
+                    <img src="images/depressed.png" alt="Depressed">
+                    <h3>Depressed</h3>
+                </div>
+                <div class="playlist">
+                    <img src="images/downbad.png" alt="Downbad">
+                    <h3>Downbad</h3>
+                </div>
+                <div class="playlist">
+                    <img src="images/rage.png" alt="Rage">
+                    <h3>Rage</h3>
+                </div>
+                <div class="playlist">
+                    <img src="images/delulu.png" alt="Delulu">
+                    <h3>Delulu</h3>
+                </div>
+            </div>
+            <div class="recommendations">
+                <img src="images/boxes.png" alt="box">
+                <h2>Recommended Songs</h2>
+                <div class="song">
+                    <img src="images/cherrywine.png" alt="cherrywine">
+                    <p>Cherry Wine</p>
+                </div>
+                <div class="song">
+                    <img src="images/thecolorviolet.png" alt="thecolorviolet">
+                    <p>The Color Violet</p>
+                </div>
+                <div class="song">
+                    <img src="images/topiatwins.png" alt="topiatwins">
+                    <p>Topia Twins/p>
+                </div>
+                <div class="song">
+                    <img src="images/goodlooking.png" alt="goodlooking">
+                    <p>Good Looking</p>
+                </div>
+        </div>
+    </div>
+    <div class="playlist" onclick="playPlaylist('Playlist 1')">
+        <img src="images/playlist1.jpg" alt="Playlist 1">
+        <h3>Playlist 1</h3>
+    </div>
+    <div class="playlist" onclick="playPlaylist('Playlist 2')">
+        <img src="images/playlist2.jpg" alt="Playlist 2">
+        <h3>Playlist 2</h3>
+    </div>
+    
+    <div class="song" onclick="playSong('Song Title 1')">
+        <img src="images/song1.jpg" alt="Song 1">
+        <p>Song Title 1</p>
+    </div>
+    <div class="song" onclick="playSong('Song Title 2')">
+        <img src="images/song2.jpg" alt="Song 2">
+        <p>Song Title 2</p>
+    </div>
+    
+    <button id="playButton" onclick="playMusic()">Play</button>
+    
+    <script>
+        function playPlaylist(playlistName) {
+            document.getElementById('playButton').style.display = 'block';
+            document.getElementById('playButton').innerText = 'Play ' + playlistName;
+        }
+    
+        function playSong(songTitle) {
+            document.getElementById('playButton').style.display = 'block';
+            document.getElementById('playButton').innerText = 'Play ' + songTitle;
+        }
+    
+        function playMusic() {
+            // You can add logic here to play the selected playlist or song.
+            // This is a placeholder for your actual functionality.
+        }
+    </script>
+</body>
+</html>
